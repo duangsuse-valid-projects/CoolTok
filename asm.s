@@ -838,6 +838,7 @@ ga_tokbase_moved:
     mov word [eax], 24 ; '$'
 
 ; ...
+; // t = t + "$"
 
     mov eax, ts
     mov edx, pdi
@@ -862,6 +863,7 @@ ga_tokbase_moved:
     mov word [eax], 26 ; '&'
 
 ; ...
+; // t = t + "&"
 
     mov eax, ts
     mov edx, pnPackageName
@@ -985,7 +987,7 @@ ga_tokbase_moved:
     mov byte [eax + 2], 0 ; "\00"
 
 ; ...
-; 
+; // str = str + "0x"
 
     mov eax, strs
     lea edx, hts

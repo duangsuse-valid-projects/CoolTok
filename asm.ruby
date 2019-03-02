@@ -147,9 +147,7 @@ def CoolLibrary.getAS(uuid = UUID.new.generate, now = Time.new)
 
     t = StringIO.new
 
-    t << h4 << mt << "$"
-    di += t.string
-    t << "&" << package_name
+    t << h4 << mt << "$" << di << t << "&" << package_name
     t = t.string
 
     cv("Token check sum", t)
